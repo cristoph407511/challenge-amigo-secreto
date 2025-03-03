@@ -16,6 +16,18 @@ function agregarAmigo(){
     renderizarAmigos();
 };
 
+//Funcion para mostrar los amigos de la lista en la pantalla.
+function renderizarAmigos(){
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
+    
+    for(let i = 0; i < amigo.length; i++){
+        let item = document.createElement("li");
+        item.textContent = amigo[i];
+        listaAmigos.appendChild(item);
+    }
+}
+
 //Funcion para sortear un amigo de la lista. Ademas de validar que haya amigos en la lista para sortear.
 function sortearAmigo(){
     if(amigo.length === 0){
