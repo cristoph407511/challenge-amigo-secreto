@@ -15,3 +15,14 @@ function agregarAmigo(){
     entradaAmigo.focus();
     renderizarAmigos();
 };
+
+//Funcion para sortear un amigo de la lista. Ademas de validar que haya amigos en la lista para sortear.
+function sortearAmigo(){
+    if(amigo.length === 0){
+        alert("No hay amigos para sortear");
+        return;//Para que no se ejecute el codigo de abajo, si no hay amigos en la lista.
+    }
+    let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
+}
